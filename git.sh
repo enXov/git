@@ -1,21 +1,3 @@
-add() {
-  git add .
-}
-
-commit() {
-  git commit -m "$1"
-}
-
-push() {
-  git push
-}
-
-acp() {
-  git add .
-  git commit -m "$1"
-  git push
-}
-
 ginit() {
   if [ -z "$1" ] || [ -z "$2" ]; then
     echo "Usage: ginit \"commit message\" <remote-url>"
@@ -31,8 +13,26 @@ ginit() {
   git push -u origin main
 }
 
+add() {
+  git add .
+}
+
+commit() {
+  git commit -m "$1"
+}
+
+push() {
+  git push
+}
+
 nuke() {
   git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) && git clean -fd
+}
+
+acp() {
+  git add .
+  git commit -m "$1"
+  git push
 }
 
 acp_fraud() {
