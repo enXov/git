@@ -29,6 +29,11 @@ nuke() {
   git reset --hard origin/$(git rev-parse --abbrev-ref HEAD) && git clean -fd
 }
 
+revert() {
+  local n="${1:-0}"
+  git revert HEAD~"$n" --no-edit
+}
+
 acp() {
   git add .
   git commit -m "$1"
