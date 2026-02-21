@@ -16,6 +16,6 @@ Shell functions that make Git easier
 ## 📥 Setup
 
 ```bash
-cat .zshrc >> ~/.zshrc
-source ~/.zshrc
+cat git.sh >> ~/.yourterminalrcfile
+source ~/.yourterminalrcfile
 ```
