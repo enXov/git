@@ -60,8 +60,8 @@ acp_fraud() {
     local commit_data
     commit_data=$(curl -s "https://api.github.com/repos/$repo/commits?author=$username&per_page=1" \
       | tr -d '\000-\037')
-    name=$(echo "$commit_data" | jq -r '.[0].commit.author.name // empty')
-    email=$(echo "$commit_data" | jq -r '.[0].commit.author.email // empty')
+    name=$(printf '%s\n' "$commit_data" | jq -r '.[0].commit.author.name // empty' 2>/dev/null)
+    email=$(printf '%s\n' "$commit_data" | jq -r '.[0].commit.author.email // empty' 2>/dev/null)
 
     if [ -n "$name" ] && [ -n "$email" ]; then
       break
