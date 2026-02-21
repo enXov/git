@@ -6,12 +6,13 @@ Shell functions that make Git easier & cunning(fraud? idk)
 
 | Function | Description |
 |----------|-------------|
+| `ginit "msg" "url"` | Initialize a new git repository with remote url |
 | `add` | Stage all changes |
 | `commit "msg"` | Commit with message |
 | `push` | Push to remote |
-| `acp "msg"` | Add → Commit → Push |
-| `acp_fraud "msg" user` | **Add → Commit → Push** as any GitHub user |
 | `nuke` | Hard reset to remote & clean untracked |
+| `acp "msg"` | Add → Commit → Push |
+| `acp_fraud "msg" "user"` | **Add → Commit → Push** as any GitHub user |
 
 ## Use cases: `acp_fraud` 
 
