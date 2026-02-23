@@ -17,7 +17,7 @@ Shell functions that make Git easier & cunning(fraud? idk)
 
 ## Use cases: `acp_fraud` 
 
-Instead of creating a alt-github acc, you can use that to commit as any github user. Use that to stay ananonymus.
+Instead of creating a alt-github acc, change git credentials, you can use that to commit as any github user. Use that to stay ananonymus. After terminal closes your git credentials back. *commiting as ghost? uuuu*
 
 ## 📥 Setup
 
